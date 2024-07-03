@@ -14,7 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 
-from django.conf.urls import url, re_path
+# Had to change the following line since url method is depricated/removed
+# as of Django 4.0
+
+# from django.conf.urls import url, re_path
+from django.urls import include, re_path
 from django.contrib import admin
 
 urlpatterns = [
